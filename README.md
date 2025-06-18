@@ -3,6 +3,18 @@
 ## Description
 Artwork Classification is a Python library designed for classifying artwork images using deep learning techniques. This project leverages convolutional neural networks (CNNs) to accurately identify and categorize various artworks based on their visual features. The library provides tools for data loading, preprocessing, model training, and evaluation, making it easy to implement and extend for various artwork classification tasks.
 
+## Dataset
+
+**Note:**  
+This project originally used the [Painter by Numbers Kaggle competition dataset](https://www.kaggle.com/competitions/painter-by-numbers).  
+As of 2025, this competition and its data are no longer available for download via the Kaggle API. If you wish to reproduce the results or run the examples, please use an alternative publicly available artwork dataset, such as [WikiArt](https://www.kaggle.com/datasets/crawford/wikiart).
+
+## Features
+
+- Modular Python library for data loading, model training, and evaluation
+- Example Jupyter notebook for end-to-end workflow
+- Unit tests and extensible code structure
+
 ## Installation
 To install the required dependencies, you can use pip. Clone the repository and navigate to the project directory, then run:
 
@@ -40,16 +52,11 @@ accuracy = evaluate_model(model, test_loader)
 print(f'Model accuracy: {accuracy:.2f}%')
 ```
 
-## Contribution Guidelines
-We welcome contributions to the Artwork Classification project! If you would like to contribute, please follow these steps:
+## Running Tests
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and commit them with clear messages.
-4. Push your branch to your forked repository.
-5. Submit a pull request detailing your changes.
+This project includes unit tests located in the `tests/` directory.  
+To run all tests, use the following command from the project root:
 
-Please ensure that your code adheres to the project's coding standards and includes appropriate tests.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+```bash
+pytest tests
+```
